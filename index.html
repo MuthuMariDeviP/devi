@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Internship Portal | DR.G.U.Pope College</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Header -->
+  <header class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="College Logo" width="80" height="80" class="mb-2">
+      <h1 class="mb-0">DR.G.U.Pope College of Engineering</h1>
+      <small>Internship Management Portal</small>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #6f42c1;">  <!-- Bootstrap purple -->
+  <div class="container">
+    <a class="navbar-brand text-white" href="{{ url_for('index') }}">Internship</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('index') }}">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('students') }}">Student Zone</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('coordinator_login') }}">Coordinator</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Main content -->
+  <main class="flex-fill">
+    <div class="container my-5">
+      <h2 class="text-primary">Welcome!</h2>
+      <p>Hello! welcome to internship cell.This portal helps manage the summer internship process. Students can register their internships, upload offer letters and certificates, and coordinators can approve or reject their submissions.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    © 2025 DR.G.U.Pope College | Designed and developed by the students of Dr.G.U.Pope College of Enginnering
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
